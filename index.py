@@ -19,7 +19,6 @@ with open('coco_features.csv', mode='w', newline='') as file:
         img_id = img_ids[ii]
         img_info = coco.loadImgs(img_id)[0]
 
-
         image = cv2.imread(f'images/{img_info["file_name"]}')
 
         ann_ids = coco.getAnnIds(imgIds=img_id)
@@ -38,7 +37,6 @@ with open('coco_features.csv', mode='w', newline='') as file:
             if keypoints:
                 features.extend(keypoints)
 
-            
              # Feature columns
 
             bbox = ann['bbox']
